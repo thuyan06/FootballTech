@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Football.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="Black">
+
+            <BoxView BackgroundColor="#1E1E1E" HeightRequest="10" HorizontalOptions="FillAndExpand" />
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                WidthRequest="100"
+                Aspect="AspectFit"
+                HorizontalOptions="Start"
+                Margin="10,5,0,0" />
+
+            <Image
+                Source="buren.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Willkommen, Alex !"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <Button Text="Abmelden" Clicked="OnLogoutButtonClicked" BackgroundColor="Red" TextColor="White" Margin="0,20,0,0" WidthRequest="150" />
+
+            <!-- TableView hier hinzufügen -->
+            <TableView x:Name="trainingTableView" Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Anmeldungsstatus">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
+                                <Label Text="Datum" VerticalOptions="Center" TextColor="Black"/>
+                                <Label Text="Status" VerticalOptions="Center" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

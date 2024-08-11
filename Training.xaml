@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Football.Training"
+             Title="Training">
+    <ScrollView>
+        <StackLayout BackgroundColor="Black" x:Name="stackLayout">
+            <BoxView BackgroundColor="#1E1E1E" HeightRequest="10" HorizontalOptions="FillAndExpand" />
+
+            <Image Source="logo.png"
+               HeightRequest="100"
+               WidthRequest="100"
+               Aspect="AspectFit"
+               HorizontalOptions="Start"
+               Margin="10,5,0,0" />
+
+            <Image Source="buren.png"
+               SemanticProperties.Description="Cute dot net bot waving hi to you!"
+               HeightRequest="200"
+               HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="White" Padding="15" CornerRadius="15" Margin="10,10,10,0">
+                <StackLayout>
+                    <Label Text="Selected Date" HorizontalOptions="CenterAndExpand" TextColor="Black" IsVisible="False" />
+                    <DatePicker x:Name="datePicker"
+                            Format="dd/MM/yyyy"
+                            DateSelected="OnDateSelected"
+                            VerticalOptions="Start"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="Black"
+                            BackgroundColor="White" />
+
+                    <RadioButton x:Name="signupRadioButton" Content="Anmelden" TextColor="Black" />
+                    <RadioButton x:Name="unregisterRadioButton" Content="Abmelden" TextColor="Black" />
+
+                    <Label x:Name="labelBegrundung" Text="Begründung für die Abmeldung" TextColor="Black" />
+                    <Entry x:Name="reasonEntry" IsVisible="False" />
+
+                    <!-- Hier wird der Anmeldestatus angezeigt -->
+                    <Label x:Name="statusLabel" Text="" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+                    <Button x:Name="submitButton" Text="Absenden" Clicked="OnSubmitClicked" BackgroundColor="Black" TextColor="White" />
+                    <Button x:Name="changeButton" Text="Ändern" Clicked="OnChangeClicked" BackgroundColor="Black" TextColor="White" />
+
+                </StackLayout>
+            </Frame>
+
+            <!-- TableView für die angemeldeten und abgemeldeten Daten -->
+            <TableView Intent="Settings" x:Name="trainingTableView">
+                <TableRoot>
+                    <TableSection Title="An- und Abmeldungen">
+                        <!-- Hier werden die Daten dynamisch hinzugefügt -->
+                        <!-- Sie können dies in Ihrem Code-Behind-File machen -->
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

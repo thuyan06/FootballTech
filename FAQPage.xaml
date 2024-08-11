@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Football.FAQPage"
+             Title="FAQ"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <StackLayout Padding="15">
+
+            <!-- Picker für Fragen -->
+            <Picker x:Name="QuestionPicker" Title="Frage auswählen" TextColor="White" TitleColor="White" BackgroundColor="#333333"
+                    SelectedIndexChanged="OnQuestionSelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Was ist FootballTech?</x:String>
+                    <x:String>Wer ist die Zielgruppe von FootballTech?</x:String>
+                    <x:String>Wie kann ich die FootballTech-App nutzen?</x:String>
+                    <x:String>Gibt es eine Support-Option?</x:String>
+                    <x:String>Wie melde ich mich für ein Training an?</x:String>
+                    <x:String>Ist eine Anmeldung erforderlich?</x:String>
+                    <!-- Weitere Fragen hier hinzufügen -->
+                </Picker.Items>
+            </Picker>
+
+            <!-- Antwort Label -->
+            <Label x:Name="SelectedAnswer" TextColor="White" FontSize="Body" Margin="0,20,0,0" IsVisible="True" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

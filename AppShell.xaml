@@ -1,0 +1,42 @@
+<!-- Aktualisierte AppShell.xaml -->
+<Shell
+    x:Class="Football.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Football"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutIcon="hamburger.png">
+
+   
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="Black">
+            <Image Source="logo.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" Margin="10,10,10,10" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Grid HeightRequest="100" BackgroundColor="Black">
+        </Grid>
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Training" Icon="fussball.png">
+        <ShellContent Route="TrainingPage" ContentTemplate="{DataTemplate local:Training}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Trainingsplan" Icon="training.png">
+        <ShellContent Route="TriningsplanPage" ContentTemplate="{DataTemplate local:Trainingsplan}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Info" Icon="info.png">
+        <ShellContent Route="InfoPage" ContentTemplate="{DataTemplate local:InfoPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="FAQ" Icon="faq.png">
+        <ShellContent Route="FAQPage" ContentTemplate="{DataTemplate local:FAQPage}" />
+    </FlyoutItem>
+</Shell>

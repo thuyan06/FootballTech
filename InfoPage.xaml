@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Football.InfoPage"
+             Title="Info"
+             BackgroundColor="Black">
+
+    <StackLayout Padding="15">
+        <Label Text="Über Uns" FontSize="Title" FontAttributes="Bold" TextColor="White" Margin="0,0,0,10" />
+
+<Label Text="Willkommen bei der Football-App!" FontSize="Subtitle" TextColor="White" Margin="0,0,0,10" />
+
+        <Label Text="Hersteller:" FontSize="Subtitle" FontAttributes="Bold" TextColor="White" Margin="0,0,0,5" />
+        <Label TextColor="White" Text="FootballTech, ansässig in Bern, ist ein innovatives Unternehmen im Bereich Fussballtechnologie. Mit einer mittelgrossen Mitarbeiterzahl strebt das Unternehmen danach, den Fussball für Vereine auf allen Ebenen zugänglicher und effizienter zu gestalten. FootballTech bedient hauptsächlich Fussballvereine unterschiedlicher Grössen und hat sich das Ziel gesetzt, einen signifikanten Marktanteil im Bereich technologischer Lösungen für den Fussballmarkt zu erreichen. Die Zielgruppe umfasst Fussballvereine jeder Grösse, und das Unternehmen strebt an, durch seine Produkte die Effizienz im Training und Management zu steigern. Ein weiteres Merkmal von FootballTech ist die Fokussierung auf benutzerfreundliche Lösungen." FontSize="Body" Margin="0,0,0,10" />
+
+        <Label Text="Anbieter:" FontSize="Subtitle" FontAttributes="Bold" TextColor="White" Margin="0,0,0,5" />
+        <Label TextColor="White" Text="FootballTech App-Entwicklungsagentur" FontSize="Body" Margin="0,0,0,10" />
+
+        <Label Text="Impressum:" FontSize="Subtitle" FontAttributes="Bold" TextColor="White" Margin="0,0,0,5" />
+        <Label TextColor="White" Text="FootballTech AG | Musterstraße 123 | 3000 Bern | Schweiz" FontSize="Body" Margin="0,0,0,5" />
+        <Label TextColor="White" Text="Telefon: +41 123 456 789 | E-Mail: info@footballtech.com" FontSize="Body" Margin="0,0,0,5" />
+        <Label TextColor="White" Text="Handelsregister: CH-123.456.789 | UID: CHE-123.456.789" FontSize="Body" Margin="0,0,0,10" />
+
+        <!-- Weitere Informationen können hier hinzugefügt werden -->
+
+    </StackLayout>
+
+</ContentPage>

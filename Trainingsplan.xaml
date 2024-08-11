@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Football.Trainingsplan"
+             Title="Trainingsplan"
+             BackgroundColor="Black">
+
+    <StackLayout>
+        <Label Text="Training Schedule" FontSize="Title" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+
+        <CarouselView ItemsSource="{Binding TrainingDays}" VerticalOptions="FillAndExpand">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Day}" FontAttributes="Bold" FontSize="20" TextColor="White"/>
+                        <Label Text="{Binding Activity}" FontAttributes="Italic" FontSize="16" TextColor="White"/>
+
+                        <Label Text="{Binding WarmUp}" FontAttributes="Bold" FontSize="18" TextColor="White"/>
+                        <Label Text="{Binding WarmUpDetails}" FontSize="16" TextColor="White"/>
+
+                        <Label Text="{Binding Technique}" FontAttributes="Bold" FontSize="18" TextColor="White"/>
+                        <Label Text="{Binding TechniqueDetails}" FontSize="16" TextColor="White"/>
+
+                        <Label Text="{Binding SmallGames}" FontAttributes="Bold" FontSize="18" TextColor="White"/>
+                        <Label Text="{Binding SmallGamesDetails}" FontSize="16" TextColor="White"/>
+
+                        <Label Text="{Binding FinalTraining}" FontAttributes="Bold" FontSize="18" TextColor="White"/>
+                        <Label Text="{Binding FinalTrainingDetails}" FontSize="16" TextColor="White"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>
